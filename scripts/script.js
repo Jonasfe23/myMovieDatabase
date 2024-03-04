@@ -97,7 +97,7 @@ function setupCarousel() {
 
 async function fetchAndDisplaySearchResults(movieTitle) {
   try {
-    const response = await fetch(`https://www.omdbapi.com/?apikey=2221e24f&s=${movieTitle}`);
+    const response = await fetch(`https://www.omdbapi.com/?apikey=[yourkey]&s=${movieTitle}`);
     const data = await response.json();
 
     const searchResultsContainer = document.getElementById('searchResultsContainer');
@@ -135,7 +135,6 @@ async function fetchAndDisplaySearchResults(movieTitle) {
 }
 
 function navigateToMoviePage(title, imdbID) {
-  console.log("Navigera till filmens sida med följande IMDb ID:", imdbID);
   window.location.href = `movie.html?title=${encodeURIComponent(title)}&imdbID=${imdbID}`;
 }
 

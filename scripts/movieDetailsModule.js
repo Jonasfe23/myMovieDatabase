@@ -4,7 +4,7 @@ import { addToFavorites } from './favorites.js';
 
 export async function getMovieDetails(imdbID) {
     try {
-        const response = await fetch(`https://www.omdbapi.com/?apikey=2221e24f&i=${imdbID}&plot=full`);
+        const response = await fetch(`https://www.omdbapi.com/?apikey=[yourkey]&i=${imdbID}&plot=full`);
         const data = await response.json();
         return data;
     } catch (error) {
